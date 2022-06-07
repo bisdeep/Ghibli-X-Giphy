@@ -1,7 +1,7 @@
 # Ghibli-X-Giphy
 ### This project is a synchronous collaboration between the APIs of **Studio Ghibli's Filmography** along with GIF image browser, **Giphy**.
 
-*(Allow some time for this GIF to load...)*
+*(Please allow some time/seconds for this GIF to load...)*
 
 ![demo](https://github.com/bisdeep/Ghibli-X-Giphy/blob/main/demo.gif?raw=true)
 
