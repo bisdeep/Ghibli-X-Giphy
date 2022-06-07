@@ -16,6 +16,8 @@ For this project I wanted to make a personal connection between the concept of G
 This project works with a string that stores the movie title from the film studio, and searches this title in the Studio Ghibli API, which will then return the matching title and description of that movie, displaying this information to the User. Afterwards, the Giphy API takes that same movie title and displays all relevant search results of GIF images to that title, *(which works for 21/22 of the movies – the only exception being the film “The Red Turtle”, which doesn’t return any relevant images for some obvious reasons).*
 After the request to Studio Ghibli's API for the movie title is successful, the returned GIFS will be displayed synchronously below the title and descriptions. If the request for the movie title isn't successful, (i.e, the film title isn't recognized in the Studio Ghibli filmography), the Giphy request cannot not be made, and the user will be returned an 404.
 
+---
+
 The synchronous nature is clearly demonstrated in **line 53 of ./index.js**, where the HTTP GET request to the Giphy (second one) API is nested within the http GET request of the Studio Ghibli (first) API, guaranteeing that the Studio Ghibli API request occurs first:
 
 ![synchronous](https://github.com/bisdeep/Ghibli-X-Giphy/blob/main/synchronousguarantee.png?raw=true)
