@@ -13,6 +13,8 @@ GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
 For this project I wanted to make a personal connection between the concept of GIF images with my lifelong interests in animated Japanese film and old school anime, and thought Studio Ghibli would be an ideal franchise to work with, especially considering they have a public API with their entire filmography currently up-to-date. 
 
+In order to successfully integrate the Giphy API requests, a Giphy account was needed to be made in order to get the api-key as **this API relies on the api-key authentication model.**
+
 This project works with a string that stores the movie title from the film studio, and searches this title in the Studio Ghibli API, which will then return the matching title and description of that movie, displaying this information to the User. Afterwards, the Giphy API takes that same movie title and displays all relevant search results of GIF images to that title, *(which works for 21/22 of the movies – the only exception being the film “The Red Turtle”, which doesn’t return any relevant images for some obvious reasons).*
 After the request to Studio Ghibli's API for the movie title is successful, the returned GIFS will be displayed synchronously below the title and descriptions. If the request for the movie title isn't successful, (i.e, the film title isn't recognized in the Studio Ghibli filmography), the Giphy request cannot not be made, and the user will be returned an 404.
 
@@ -35,6 +37,7 @@ The synchronous nature is clearly demonstrated in **line 53 of ./index.js**, whe
 - Functionality to remove case sensitivity in searches - the titles in the Studio Ghibli API are case sensitive and must be searched exactly how the titles appear, else the titles will not be valid,
     - This can be implemented by converting the user's search term to lowercase (via .toLowerCase) and comparing it with the title field of the returned API object from the Studio Ghibli (first) API request, also converted to lowercase.
 - Perhaps a dropdown with all movie titles stored as entries, but this is probably counter-intuitive with the search feature that is present.
+- We can guarantee relevant GIFS to appear by manually storing GIFS related to these movies in a Giphy account which would rely on a client-credential authentication model - that way GIFS related to the movie "The Red Turtle" will not display random turtle gifs, and fan art gifs will also not appear for certain titles.
 ---
 
 ### APIs used:
