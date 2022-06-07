@@ -5,7 +5,7 @@
 
 ![demo](https://github.com/bisdeep/Ghibli-X-Giphy/blob/main/demo.gif?raw=true)
 
-*(The **synchronous** nature with the 2nd API requests are more evident with the 2nd and 3rd title searches - the first search was actually made prior to recording this demo)*
+*(The **synchronous** nature with the 2nd API requests is more evident with the 2nd and 3rd title searches - the first search was actually made prior to recording this demo)*
 
 GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
