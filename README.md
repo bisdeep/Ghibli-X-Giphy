@@ -1,4 +1,4 @@
-# Ghibli-X-Giphy
+# Studio-Ghibli X Giphy
 ### This project is a synchronous collaboration between the APIs of **Studio Ghibli's Filmography** along with GIF image browser, **Giphy**.
 
 *(Please allow some time/seconds for this GIF to load...)*
