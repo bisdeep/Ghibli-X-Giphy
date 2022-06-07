@@ -1,0 +1,42 @@
+title Giphy x Studio Ghibli
+
+
+participant Studio Ghibli[A]
+participant User
+participant Server
+participant Giphy[B]
+
+note over User:Browser requests \nroot of site
+
+User->(1)Server:GET /\nHost:localhost:3000
+Server->(1)User: 200 OK + index.html (form to fill out)
+
+note over User:User fills out form (supplies data: **Studio Ghibli movie title**) 
+
+
+User->(1)Server:GET /search?title=Castle+in+the+Sky\nHost:localhost:3000
+
+
+Server->(1)Studio Ghibli[A]: GET https://ghibliapi.herokuapp.com/films?title=Castle+in+the+Sky
+
+
+Studio Ghibli[A]->Server: 200 OK + get_information(title, res), call to parse_ghibli from Ghibli API returning JSON object of movie
+note over Studio Ghibli[A]: This function is responsible for starting the request from the Studio Ghibli API that is passed as a callback into the Giphy API request via our server.
+Server->User: display title and description to the User, before reaching out to the next API request.
+Server->Giphy[B]: GET https://api.giphy.com/v1/gifs/search?api_key=${api_key}&q=${title}&limit=6&offset=0&rating=g&lang=en`;
+note over Server: This is reliant on the response first being valid from Studio Ghibli API, else displays a 404.
+
+Giphy[B]->Server: 200 OK + call to parse_giphy which parses JSON object of gifs.
+
+Server->User: display all 6 gifs parsed 
+
+
+
+
+
+
+
+
+
+
+
