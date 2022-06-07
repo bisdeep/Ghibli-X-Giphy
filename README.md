@@ -43,7 +43,7 @@ The synchronous nature is clearly demonstrated in **line 53 of ./index.js**, whe
 ### APIs used:
 
 - [Studio Ghibli API](https://ghibliapi.herokuapp.com/#section/Studio-Ghibli-API) - Public API library of the Studio Ghibli filmography
-- [Giphy API](https://developers.giphy.com/docs/api/) - Giphy library with several endpoints *(account creation is required to obtain an API key)*
+- [Giphy API](https://developers.giphy.com/docs/api/) - Giphy API with several endpoints *(account creation is required to obtain an API key)*
 
 ### License
 
