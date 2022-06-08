@@ -1,5 +1,5 @@
 # Studio-Ghibli X Giphy
-### This project is a synchronous collaboration between the APIs of **Studio Ghibli's Filmography** along with GIF image browser, **Giphy**.
+### This project is a synchronous mashup between the APIs of **Studio Ghibli's Filmography** along with GIF image browser, **Giphy**, made **purely with Node.js** and **no third-party modules/libraries whatsoever.** 
 
 *(Please allow some time/seconds for this GIF to load...)*
 
